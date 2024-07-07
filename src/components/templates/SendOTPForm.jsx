@@ -1,10 +1,14 @@
 import { sendOTP } from "../../services/auth";
+import toast from 'react-hot-toast';
 
 function SendOTPForm({ setMobile, mobile, setStep }) {
     const submitHandler = async (event) => {
         event.preventDefault();
 
-        if (mobile.length < 11) return;
+        if (mobile.length < 11) {
+            toast.error("شماره موبایل وارد شده صحیح نمی باشد.")
+            return;
+        };
 
         const { response, error } = await sendOTP(mobile); 
         if (response) setStep(2);//direct to CheckOTPForm

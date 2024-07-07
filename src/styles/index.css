@@ -27,3 +27,10 @@ input,
 select {
   font-family: inherit;
 }
+
+.toast-alert {
+    font-size: 12px;
+    background-color: #A62626;
+    color: #fff;
+    padding: 5px 8px;
+}

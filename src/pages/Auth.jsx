@@ -14,7 +14,7 @@ function Auth() {
         {
             step === 1 ?
                 <SendOTPForm setStep={setStep} mobile={userMobile} setMobile={setUserMobile} /> :
-                <CheckOTPForm />
+                <CheckOTPForm setCode={setOTPCode} mobile={userMobile} setStep={setStep} code={OTPCode}  />
         }
     </>
   )
