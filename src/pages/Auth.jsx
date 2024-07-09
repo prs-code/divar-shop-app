@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CheckOTPForm from "../components/CheckOTPForm";
-import SendOTPForm from "../components/templates/SendOTPForm";
+import CheckOTPForm from "components/CheckOTPForm";
+import SendOTPForm from "components/templates/SendOTPForm";
 
 function Auth() {
     //step1 => showing SendOTPForm

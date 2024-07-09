@@ -1,5 +1,6 @@
 import toast from 'react-hot-toast';
-import { checkOTP } from '../services/auth';
+import { checkOTP } from 'services/auth';
+import { setCookie } from 'utils/cookie';
 
 function CheckOTPForm({ code, setCode, mobile, setStep }) {
     const submitHandler = async event => {
@@ -11,10 +12,12 @@ function CheckOTPForm({ code, setCode, mobile, setStep }) {
         };
 
         const { response, error } = await checkOTP(mobile, code);
-        console.log({ response, error });
 
         if (error) toast.error("،کد وارد شده اشتباه است یا تاریخ مصرف آن به اتمام رسیده\nجهت دریافت کد جدید اقدام نمایید.")
-        if (response) toast.success("ورود با موفقیت انجام شد")
+        if (response) {
+            setCookie(response.data);
+            toast.success("ورود با موفقیت انجام شد");
+        };
 
          
     };

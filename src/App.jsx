@@ -1,4 +1,4 @@
-import Auth from "./pages/Auth";
+import Auth from "pages/Auth";
 import { Toaster } from 'react-hot-toast';
 
 function App() {

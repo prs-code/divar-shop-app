@@ -1,4 +1,4 @@
-import { sendOTP } from "../../services/auth";
+import { sendOTP } from "services/auth";
 import toast from 'react-hot-toast';
 
 function SendOTPForm({ setMobile, mobile, setStep }) {
