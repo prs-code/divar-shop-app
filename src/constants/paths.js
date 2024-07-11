@@ -6,6 +6,5 @@ export const paths = [
     "pages",
     "router",
     "services",
-    "src",
     "styles"
 ];
